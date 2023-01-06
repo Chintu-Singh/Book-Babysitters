@@ -1,0 +1,24 @@
+#map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+#map-card {
+  width: 90vw;
+  height: 100%;
+}
+.icon img {
+  width: 20px;
+  height: 20px;
+}
+#pacman {
+  margin-left: -200px;
+  display: flex;
+  justify-content: center;
+  min-height: 500px;
+}
+.avatar-img {
+  border-radius: 5px;
+}

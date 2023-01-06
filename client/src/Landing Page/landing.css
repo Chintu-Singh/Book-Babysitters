@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+#home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+/*TOP SECTION*/
+#top-container {
+  background-image: url('../Images/bgimg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+#landing-title-container {
+  padding: 5px 5px 10px;
+}
+@media only screen and (min-width: 1000px) {
+  #landing-title-container {
+    max-width: 40vw;
+    padding: 30px;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    border-radius: 20px;
+  }
+}
+#landing-title-container .lt-title {
+  font-size: 50px;
+  font-family: 'Poppins';
+}
+@media only screen and (min-width: 1000px) {
+  #landing-title-container .lt-title {
+    font-size: 80px;
+  }
+}
+#landing-title-container .lt-subtitle {
+  margin: auto;
+  width: 80%;
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-weight: 300;
+  text-align: left;
+}
+#landing-title-container .home-btn {
+  margin: 30px 15px;
+  padding: 15px 60px;
+  font-weight: 300;
+  font-family: 'Poppins';
+}
+@media only screen and (min-width: 1000px) {
+  #landing-title-container .home-btn {
+    margin: 30px 15px;
+    padding: 15px 60px;
+    width: 150px;
+  }
+}
+
+/*ARROW*/
+.arrow-container {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  /*ARROW*/
+  .arrow-container {
+    left: 50%;
+  }
+}
+.arrow {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* ABOUT THE SITE*/
+#landing-about-site {
+  margin-top: 10vh;
+  max-width: 95vw;
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+@media only screen and (min-width: 1000px) {
+  #landing-about-site {
+    width: 100%;
+    height: 75vh;
+    align-self: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-row-gap: 90px;
+    grid-column-gap: 10px;
+    grid-template: repeat(2, 30%) / repeat(2, 50%);
+    grid-template-areas:
+      'title info'
+      'one two';
+    text-align: left;
+  }
+}
+#about-site-title,
+#about-site-signup {
+  text-align: center;
+}
+#about-site-title,
+#about-site-info,
+#about-site-list,
+#about-site-signup {
+  padding: 30px;
+}
+#about-site-list ul li {
+  list-style-type: square;
+}
+#landing-about-site-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+#landing-about-site-btns button {
+  margin-bottom: 60px;
+  transform: scale(1.5, 1.5);
+}
+@media only screen and (min-width: 1000px) {
+  #about-site-title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  #about-site-info {
+    grid-area: info;
+    padding: 10px;
+  }
+  #about-site-list,
+  #about-site-signup {
+    margin-top: 100px;
+    padding: 40px;
+  }
+  #about-site-list {
+    grid-area: one;
+  }
+  #about-site-signup {
+    grid-area: two;
+    margin-top: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #about-site-signup-lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

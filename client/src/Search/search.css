@@ -1,0 +1,60 @@
+.searchmap-container {
+  margin: 100px 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+  form {
+    width: 80vw;
+  }
+}
+fieldset.search-form-control {
+  margin-top: 20px;
+  padding: 10px;
+}
+form .header-card-btn {
+  align-self: center;
+  width: 40%;
+  margin-top: 20px;
+}
+.search-result-box {
+  margin-top: 50px;
+  width: 95vw;
+}
+@media only screen and (min-width: 950px) {
+  .search-result-box {
+    width: 70vw;
+  }
+}
+.results-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}
+div.search-results {
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  background-color: #000;
+  color: #fff;
+}
+@media only screen and (min-width: 700px) {
+  div.search-results {
+    width: 250px;
+  }
+}
+div .result-link {
+  font-size: 25px;
+  font-weight: bold;
+}
+div .result-role {
+  font-weight: bold;
+}

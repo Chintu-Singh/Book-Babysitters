@@ -1,0 +1,200 @@
+#profile-container {
+  margin-top: 100px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-gap: 5vw;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 100vw;
+  grid-template-areas: 'topleft' 'right' 'cal';
+  white-space: pre-wrap;
+}
+@media only screen and (min-width: 630px) {
+  #profile-container {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 100vw;
+    grid-template-areas: 'topleft' 'right' 'cal';
+  }
+}
+@media only screen and (min-width: 950px) {
+  #profile-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: 20vw 70vw;
+    grid-template-areas:
+      'topleft right'
+      '. cal';
+  }
+}
+/* TOP LEFT */
+#topleft {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 30px auto auto;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 630px) {
+  #topleft {
+    grid-area: topleft;
+    max-width: 90vw;
+    margin-bottom: -70px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'img name'
+      'btns pay';
+  }
+}
+@media only screen and (min-width: 950px) {
+  #topleft {
+    position: fixed;
+    top: 100px;
+    left: 8.5vw;
+    width: 500px;
+    grid-area: topleft;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      'img'
+      'name'
+      'btns'
+      'pay';
+  }
+}
+/*TOP LEFT ITEMS */
+#profile-image {
+  grid-area: img;
+  height: 200px;
+  width: 200px;
+  border-radius: 10%;
+}
+#profile-name {
+  margin-left: 5vw;
+  margin-top: 10px;
+  position: relative;
+  grid-area: name;
+  min-height: 40px;
+  width: 90%;
+}
+@media only screen and (min-width: 630px) {
+  #profile-name {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+.heart {
+  position: absolute;
+  background: white;
+  padding: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+}
+#profile-btn-wrapper {
+  grid-area: btns;
+  display: flex;
+}
+#btn1 {
+  margin-right: 10px;
+}
+#btn1,
+#btn2 {
+  margin-top: 25px;
+}
+@media only screen and (min-width: 630px) {
+  #profile-btn-wrapper {
+    align-self: flex-start;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 950px) {
+  #btn1,
+  #btn2 {
+    margin-top: 10px;
+  }
+}
+#payment {
+  grid-area: pay;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 950px) {
+  #payment {
+    margin-top: 0px;
+  }
+}
+/* RIGHT */
+#right {
+  grid-area: right;
+}
+@media only screen and (min-width: 630px) {
+  #right {
+    margin: -65px 0 0 50px;
+  }
+}
+#right h6 {
+  text-decoration: underline;
+}
+/*RIGHT ITEMS */
+#right-flex {
+  margin: 50px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+}
+.pet-card {
+  margin: 0 10px 20px;
+  width: 250px;
+}
+.pet-card-img {
+  height: 200px;
+}
+.pet-card-btns {
+  display: flex;
+  justify-content: center;
+}
+#pet-info {
+  text-align: left;
+  margin: 20px auto;
+  min-height: 40px;
+  height: auto;
+  width: 80%;
+}
+#about {
+  width: 90%;
+  margin: 0px auto 40px 5%;
+  text-align: left;
+}
+@media only screen and (min-width: 630px) {
+  #about {
+    margin: auto;
+    flex-basis: 100%;
+  }
+}
+@media only screen and (min-width: 630px) {
+  #about {
+    margin: 100px auto;
+    flex-basis: 80%;
+  }
+}
+/*CALENDAR */
+#calendar {
+  grid-area: cal;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 950px) {
+  #calendar {
+    width: 80%;
+    margin-left: 100px;
+  }
+}
